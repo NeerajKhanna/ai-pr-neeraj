@@ -65,6 +65,11 @@ jobs:
         run: |
           coverage run -m pytest
           coverage report
+          
+      - name: Clear pytest cache
+        run: |
+          find . -type d -name "__pycache__" -exec rm -rf {} +
+          rm -rf .pytest_cache
 
       # Step 7: Run AI Agent to review PR
       - name: Run AI Agent to Review PR
