@@ -65,7 +65,7 @@ jobs:
         run: |
           coverage run -m pytest
           coverage report
-          
+      # Step 6.1: Check code coverage    
       - name: Clear pytest cache
         run: |
           find . -type d -name "__pycache__" -exec rm -rf {} +
