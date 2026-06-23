@@ -13,6 +13,20 @@ jobs:
       # Step 1: Checkout the code
       - name: Checkout code
         uses: actions/checkout@v2
+      # Step 1.1: Checkout the code
+      - name: Show Working Directory
+        run: |
+          echo "Current working directory:"
+          pwd
+
+          echo "GitHub workspace:"
+          echo $GITHUB_WORKSPACE
+
+          echo "Directory contents:"
+          ls -la
+
+          echo "Recursive file listing:"
+          find . -type f | sort
 
       # Step 2: Set up Python
       - name: Set up Python
