@@ -4,6 +4,8 @@ from github import Github, Auth
 # Set up GitHub authentication using the Personal Access Token (PAT)
 # You can replace the token with a GitHub secret (e.g., CIagent) in your CI/CD pipeline
 token = os.getenv("GITHUB_TOKEN")  # Replace this with your GitHub Token
+
+print("Token Name", token)
 g = Github(auth=Auth.Token(token))  # Authenticate with the GitHub API using the token
 
 # GitHub repository and PR detailstoken = ''
